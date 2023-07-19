@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * _abs - Computes the absolute value of an integer
@@ -13,19 +13,3 @@ int _abs(int n)
 	else
 		return (n);
 }
-
-/**
- * main - Entry point of the program
- *
- * Return: 0 (Success)
- */
-int main(void)
-{
-	int num = -10;
-	int abs_num = _abs(num);
-
-    printf("The absolute value of %d is %d\n", num, abs_num);
-
-    return (0);
-}
-
