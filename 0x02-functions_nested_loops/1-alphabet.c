@@ -14,7 +14,7 @@ void print_alphabet(void)
 
 	putchar('\n');
 }
-#include <main.h>
+#include "main.h"
 /**
  * main - Entry point of the program
  *
