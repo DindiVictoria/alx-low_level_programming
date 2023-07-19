@@ -1,7 +1,8 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "main.h"
+
 /**
  * print_alphabet - Prints the alphabet in lowercase
+ * Return: 0 always
  */
 void print_alphabet(void)
 {
@@ -9,19 +10,8 @@ void print_alphabet(void)
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar(letter);
+		_putchar(letter);
 	}
 
-	putchar('\n');
-}
-#include "main.h"
-/**
- * main - Entry point of the program
- *
- * Return: 0 on success
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
+	_putchar('\n');
 }

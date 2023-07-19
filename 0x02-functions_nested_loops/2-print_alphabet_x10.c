@@ -30,14 +30,3 @@ void print_alphabet_x10(void)
 
 	putchar('\n');
 }
-
-/**
- * main - Entry point of the program
- *
- * Return: 0 on success
- */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
