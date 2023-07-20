@@ -29,9 +29,8 @@ void print_remaining_days(int month, int day, int year)
 		{
 			int day_of_year = 0;
 
-			for
+			for (int i = 1; i < month; i++)
 			{
-				(int i = 1; i < month; i++)
 				day_of_year += days_in_month[i];
 			}
 			day_of_year += day;
