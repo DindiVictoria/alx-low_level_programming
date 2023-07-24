@@ -3,37 +3,49 @@
 #include <time.h>
 #include <stdbool.h>
 
-#define PASSWORD_LENGTH 11
+/**
+ *main - generates random valid passwords for the program 101-crackme.
+ *@password: string password
+ *Return: The generated password
+ */
+int main(void)
+{
+	char password[84];
+	int index = 0, sum = 0, diff_half1, diff_half2;
 
-bool is_valid_password(const char *password) {
-    // Add your logic to check if the password is valid for the crackme
-    // For example, you can check if the password meets certain conditions.
-    // For this example, let's assume all passwords are valid.
-    return true;
-}
+	srand(time(0));
 
-void generate_random_password(char *password) {
-    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    int charset_length = sizeof(charset) - 1;
-
-    for (int i = 0; i < PASSWORD_LENGTH - 1; i++) {
-        password[i] = charset[rand() % charset_length];
-    }
-    password[PASSWORD_LENGTH - 1] = '\0';
-}
-
-int main() {
-    srand(time(NULL));
-
-    while (true) {
-        char password[PASSWORD_LENGTH];
-        generate_random_password(password);
-
-        if (is_valid_password(password)) {
-            printf("Valid password: %s\n", password);
-            break;
-        }
-    }
-
-    return 0;
+	while (sum < 2772)
+	{
+		password[index] = 33 + rand() % 94;
+		sum += password[index++];
+	}
+	password[index] = '\0';
+	if (sum != 2772)
+	{
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
+		if ((sum - 2772) % 2 != 0)
+		{
+			diff_half1++;
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+				break;
+			}
+		}
+	}
+	printf("%s\n", password);
+	return (0);
 }
