@@ -10,7 +10,7 @@ char *leet(char *str)
 {
 	char *ptr = str;
 	char leet_map[128] = {0};
-	char replace[] = "01374";
+	char replace[] = "0137401374";
 	char leet_chars[] = "oleatOLEAT";
 
 	int i;
