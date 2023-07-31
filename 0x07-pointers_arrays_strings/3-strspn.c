@@ -16,10 +16,6 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		char *a = accept;
 
-		while (*a != '\0')
-		{
-			char *a = accept;
-
 			while (*a != '\0')
 			{
 				if (*s == *a)
@@ -33,9 +29,7 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 
 			s++;
-		}
-
-		return (count);
 	}
 
+		return (count);
 }
