@@ -38,18 +38,20 @@ int main(int argc, char *argv[])
 	}
 	else if (operator == '%')
 	{
-    } else if (operator == '%') {
-        if (num2 == 0) {
-            printf("Error\n");
-            return 100;
-        }
-        result = num1 % num2;
-    } else {
-        printf("Error\n");
-        return 99;
-    }
+		if (num2 == 0)
+		{
+			printf("Error\n");
+			return (100);
+		}
+		result = num1 % num2;
+	}
+	else
+	{
+		printf("Error\n");
+		return (99);
+	}
 
-    printf("%d\n", result);
+	printf("%d\n", result);
 
-    return 0;
+	return (0);
 }
