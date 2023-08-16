@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - Entry point of the program.
+ * @argc: Number of command line arguments.
+ * @argv: Array of command line arguments.
+ *
+ * Return: 0 on success, 98 for incorrect number of arguments,
+ *         99 for invalid operator, 100 for division/modulo by zero.
+ */
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
@@ -16,7 +24,8 @@ int main(int argc, char *argv[])
 	operator = argv[2][0];
 	num2 = atoi(argv[3]);
 
-	if (operator != '+' && operator != '-' && operator != '*' && operator != '/' && operator != '%')
+	if (operator != '+' && operator != '-' && operator != '*' &&
+			operator != '/' && operator != '%')
 	{
 		printf("Error\n");
 		return (99);
