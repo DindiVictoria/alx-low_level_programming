@@ -1,6 +1,6 @@
 /* 3-op_functions.c */
 
-#include "calc.h"
+#include "3-calc.h"
 
 int op_add(int a, int b)
 {
